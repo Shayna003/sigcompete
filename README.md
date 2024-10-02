@@ -15,7 +15,7 @@ Feel free to browse the materials. All problem sets and solutions are organized 
 Find the latest problem sets in the `problem-sets` directory. Solutions will be posted after each session.
 
 ### Contributing
-Want to contribute? Please reach out to us on our (Discord server)[https://discord.gg/sD74JdV8] for more information on how to get involved.
+Want to contribute? Please reach out to us on our [Discord server](https://discord.gg/sD74JdV8) for more information on how to get involved.
 
 ## License
 
