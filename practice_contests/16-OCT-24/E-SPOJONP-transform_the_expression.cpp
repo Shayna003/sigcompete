@@ -17,6 +17,14 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
     return {l.first+r.first,l.second+r.second};                                    
 }
 
+
+// this problem was a direct implementation of the SHUNTING YARD ALGORITHM
+// The shunting yard algorithm is a famous stack algorithm used for turning
+// infix notation ( 1+2*3^(4+1) ), into more computer operable postfix 
+// notation (or RPN) ( 12341+^*+ )
+// this brilliant article explains it pretty well
+// https://brilliant.org/wiki/shunting-yard-algorithm/
+
 template<class T>
 void printq(queue<T> x){
 	while(!x.empty()){

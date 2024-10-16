@@ -12,7 +12,8 @@ using namespace std;
 #define v(i) vector<i>
 #define inveci(n,a) for(int integer=0; integer < n; integer++) {int abc123; cin >> abc123; a.pb(abc123);}
 
-
+// Uses a queue data structure to implement the solution to the problem. 
+// Also have a hash map to store the index-value pairs of the elements
 void solve(int tc)
 {
 	int n, m; cin >> n >> m;

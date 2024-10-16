@@ -38,6 +38,8 @@ void solve(int b, int v)
 			tmp += s;
 		}
 
+		// c++ has a special way you can convert from binary strings to 
+		// ints (or in this case long longs) 
 		vals[vars[i].first] = stoull(tmp,nullptr,2);
 	}
 

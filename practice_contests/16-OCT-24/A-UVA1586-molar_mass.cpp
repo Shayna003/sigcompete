@@ -21,7 +21,15 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
 void solve(int tc)
 {
 	string s; cin >> s;
+
+	// tokens is a list of pairs of characters and integers.
+	// each pair represents the associated chemical (from CHON)
+	// and its count.
 	vector<pair<char,int>> tokens = {mp(s[0],1)};
+
+	// takes the string and parses it into tokens.
+	// if its a character a new token is added to the tokens list.
+	// if not we backtrack to find the total number of the element
 	for(int i = 1; i < s.size(); i++){
 		if(isalpha(s[i])){
 			tokens.pb(mp(s[i], 1));
@@ -39,6 +47,7 @@ void solve(int tc)
 		}
 	}
 
+	// molar masses represented in a hashmap for convenience
 	unordered_map<char, float> molars;
 	molars['C'] = 12.01;
 	molars['H'] = 1.008;

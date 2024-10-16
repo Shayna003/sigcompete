@@ -17,7 +17,14 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
     return {l.first+r.first,l.second+r.second};                                    
 }
 
+// you can approach this problem by doing a linear
+// scan through the array whilst maintaining a 
+// temporary variable to record your "streak" of O's
 
+// for non C++ users, the ++ incrementer being run AFTER
+// ptr means that we return the value of ptr before it
+// gets incremented. therefore out += ptr++ increases
+// the value of out by ptr, THEN increments ptr.
 void solve(int tc)
 {
 	string s; cin >> s;

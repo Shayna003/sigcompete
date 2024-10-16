@@ -17,7 +17,9 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
     return {l.first+r.first,l.second+r.second};                                    
 }
 
-
+// this problem was mainly implementation heavy. You don't actually need to make
+// a grid (2d list or matrix) to solve this problem. This solution is probably
+// not the neatest way of going about it...
 void solve(int tc)
 {
 	int players, snadders, rolls;
@@ -41,12 +43,6 @@ void solve(int tc)
 	int curplayer = 0;
 	for(int i = 0; i < rolls; i++)
 	{
-		/*
-		for(int i = 0; i < players; i++)
-		{
-			cout << "\t\tPosition of player " << i+1 << " is " << playerpos[i]+1 << "." << endl;
-		}
-		*/
 		playerpos[curplayer] += movelist[i];
 		if(routes[playerpos[curplayer]] >= 0) {
 			playerpos[curplayer] = routes[playerpos[curplayer]];

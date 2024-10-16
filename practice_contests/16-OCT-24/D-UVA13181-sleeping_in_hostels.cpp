@@ -17,7 +17,14 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
     return {l.first+r.first,l.second+r.second};                                    
 }
 
-
+//To solve this problem you need to essentially find the maximum distance between any two `X` values,
+//inclusive of the beginning and end of the array. Once we find this maximum distance, the maximum a
+//person can be distanced between the two `X` values will be found by using the formula: 
+//	floor((x-1)/2)
+//However, if our maximum distance is between an `X` and boundary, 
+//i.e. the beginning or end of the array. Then we can maximise our distance by simply sleeping at the 
+//end of the array, or beginning of it, since there is no second `X` value to compare with. The formula 
+//for this is simply just x-1
 void solve(string s)
 {
 	vector<int> beds;

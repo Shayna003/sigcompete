@@ -17,6 +17,14 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
     return {l.first+r.first,l.second+r.second};                                    
 }
 
+
+// this is a chess FEN notation converter problem. It is quite nitpicky
+// and has several edge cases. My current solution is brute-forcey but can be done in 
+// around an hour. For some prepatory problems, or other chess related CS problems
+// check out:
+// UVA 278
+// UVA 696
+
 bool ok(pair<int,int> pos){
 	if(pos.first < 8 and pos.second < 8 and pos.first >= 0 and pos.second >= 0)
 		return true;

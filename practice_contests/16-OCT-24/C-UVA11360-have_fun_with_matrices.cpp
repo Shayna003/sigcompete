@@ -17,7 +17,11 @@ std::pair<T,U> operator+(const std::pair<T,U> & l,const std::pair<T,U> & r) {
     return {l.first+r.first,l.second+r.second};                                    
 }
 
-
+// applying matrix operations using queries.
+// note for the transpose operator, we make use of the C++ swap()
+// function, which lets us swap elements along the diagonal of the
+// matrix.
+// Make sure to be careful with how you output your results!
 void solve(int tc)
 {
 	int n; cin >> n; 
